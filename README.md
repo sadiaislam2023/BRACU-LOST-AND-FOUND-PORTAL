@@ -4,11 +4,35 @@ A web-based lost-and-found management system developed as an independent group p
 
 ## Project Overview
 
-The **BRACU Lost and Found Portal** is a web application designed to make reporting lost and found belongings, submitting ownership claims, and managing item recovery more organized and convenient.
+The **BRACU Lost and Found Portal** is a web application designed to make reporting lost and found belongings, browsing reported items, submitting ownership claims, and managing item recovery more organized and convenient.
 
-The platform provides a centralized system where users can report lost or found items, browse reported listings, submit claims with supporting evidence, and communicate through the application. It also includes administrative features to help manage item reports, claims, and related activities.
+The platform provides a centralized interface for users to report missing belongings, share information about found items, submit claims with supporting evidence, and communicate through the application. Administrative functionality supports the review of item reports, claim-related activities, and platform management.
 
-This project was independently developed as a personal group project to apply web development concepts to a practical problem. Although the project is designed around a BRACU-related use case, it is not an official university platform and is not affiliated with or endorsed by BRAC University.
+This project was independently developed as a personal group project to apply web development concepts to a practical, real-world problem. Although its intended use case is related to the BRAC University community, it is not an official university platform and is not affiliated with, endorsed by, or maintained by BRAC University.
+
+## Screenshots
+
+The following screenshots showcase the user interface and key features of the BRACU Lost and Found Portal.
+
+### 1. Home Page
+
+![BRACU Lost and Found Portal - Home Page](screenshots/home.jpeg)
+
+### 2. Lost and Found Listings
+
+![Lost and Found Item Listings](screenshots/item-listings.jpeg)
+
+### 3. Report an Item
+
+![Report a Lost or Found Item](screenshots/report-item.jpeg)
+
+### 4. Claim Found Item
+
+![Claim Found Item](screenshots/claim-found-item.jpeg)
+
+### 5. Admin Dashboard
+
+![BRACU Lost and Found Portal - Admin Dashboard](screenshots/admin-dashboard.jpeg)
 
 ## Key Features
 
@@ -16,24 +40,24 @@ This project was independently developed as a personal group project to apply we
 
 - User registration and login.
 - Password hashing for credential storage.
-- User roles for students, faculty members, and administrators.
+- Role-based access for supported user categories.
 - Session-based access to authenticated features.
-- Role-based access to relevant parts of the application.
+- Access control for relevant application functionality.
 
 ### 2. Lost and Found Item Management
 
 - Submit reports for lost and found belongings.
 - Provide item descriptions, categories, and location details.
-- Include item images and relevant information where supported.
-- Browse reported items.
-- Review item details and reporting status.
-- Support item review and approval through administrative functionality.
+- Include item images and other relevant information where supported.
+- Browse reported lost and found items.
+- View item details and reporting information.
+- Support administrative review and approval of reports.
 
 ### 3. Item Claiming System
 
-- Submit claims for items believed to belong to the claimant.
-- Provide claim messages and contact information.
-- Upload supporting proof documents.
+- Submit ownership claims for found items.
+- Provide claim messages and relevant contact information.
+- Upload supporting evidence where supported.
 - Store claim information for review.
 - Track claim status through the application.
 
@@ -41,26 +65,29 @@ This project was independently developed as a personal group project to apply we
 
 - Send and receive messages through the platform.
 - Support communication between users.
-- Help users exchange relevant information during the item recovery process.
+- Facilitate the exchange of relevant information during item recovery.
 
 ### 5. Notification System
 
 - Display notifications related to platform activities.
-- Store notification information for users.
-- Support status awareness and communication throughout the process.
+- Maintain notification information for users.
+- Help users stay informed about relevant updates and actions.
 
-### 6. Administrative Functionality
+### 6. Administrative Management
 
-- Provide administrative access to relevant management features.
+- Provide administrative access to management features.
 - Review reported items and associated information.
 - Manage item approval and reporting status.
-- Support the handling of claims and other platform activities.
+- Support the handling of ownership claims.
+- Assist with the overall management of platform activities.
 
 ### 7. Feedback System
 
 - Allow users to submit feedback.
-- Collect suggestions about the platform.
+- Collect suggestions regarding the application.
 - Support future improvements to usability and functionality.
+
+*Feature availability and behavior depend on the application's implementation and configuration.*
 
 ## Technology Stack
 
@@ -72,9 +99,9 @@ This project was independently developed as a personal group project to apply we
 | CSS3 | Styling and layout |
 | JavaScript | Client-side interactivity |
 | Bootstrap 5 | Responsive interface components |
-| Apache | Local web server |
+| Apache | Web server |
 | XAMPP | Local development environment |
-| phpMyAdmin | Database management |
+| phpMyAdmin | Database administration |
 | Git | Version control |
 | GitHub | Source code hosting and collaboration |
 
@@ -93,20 +120,26 @@ BRACU-LOST-AND-FOUND-PORTAL/
 │   ├── navbar.php
 │   ├── uploads/
 │   └── ...
+├── screenshots/
+│   ├── home.jpeg
+│   ├── item-listings.jpeg
+│   ├── report-item.jpeg
+│   ├── claim-found-item.jpeg
+│   └── admin-dashboard.jpeg
 ├── SQL/
 │   └── Database SQL resources
 └── README.md
 ```
 
-This is a simplified representation of the project structure. Refer to the repository for the actual files and directories.
+This structure is a simplified representation of the project. Refer to the repository for the complete source code, actual filenames, and available database resources.
 
 ## Getting Started
 
-Follow the instructions below to run the application on a local Windows computer.
+The following instructions describe a typical local setup on Windows using XAMPP.
 
 ### Prerequisites
 
-Install the following tools:
+Install the following tools before setting up the application:
 
 - [XAMPP](https://www.apachefriends.org/) — provides Apache, PHP, and MySQL/MariaDB services.
 - [Git](https://git-scm.com/) — for cloning the repository.
@@ -121,48 +154,54 @@ Open PowerShell or Command Prompt and run:
 git clone https://github.com/sadiaislam2023/BRACU-LOST-AND-FOUND-PORTAL.git
 ```
 
-### Step 2: Place the Project in the XAMPP Directory
+Navigate to the cloned repository:
 
-Move or copy the cloned repository into your XAMPP `htdocs` directory.
+```bash
+cd BRACU-LOST-AND-FOUND-PORTAL
+```
 
-For a typical Windows installation, the directory is:
+### Step 2: Configure the Project Directory
+
+Move or copy the project into the XAMPP `htdocs` directory.
+
+For a typical Windows installation, the repository should be located at:
 
 ```text
 C:\xampp\htdocs\BRACU-LOST-AND-FOUND-PORTAL
 ```
 
-The main application folder should then be available at:
+The main application directory should then be:
 
 ```text
 C:\xampp\htdocs\BRACU-LOST-AND-FOUND-PORTAL\bracu_lost_and_found
 ```
 
-If XAMPP is installed in a different location, use the corresponding `htdocs` directory on your computer.
+If XAMPP is installed elsewhere, use the corresponding `htdocs` directory.
 
 ### Step 3: Start Apache and MySQL
 
 1. Open the XAMPP Control Panel.
-2. Start Apache.
-3. Start MySQL.
+2. Start **Apache**.
+3. Start **MySQL**.
 4. Confirm that both services are running.
 
-### Step 4: Create the Database
+### Step 4: Create and Import the Database
 
-1. Open [phpMyAdmin](http://localhost/phpmyadmin/).
+1. Open [phpMyAdmin](http://localhost/phpmyadmin/) in your browser.
 2. Create a database named `bracu_lost_and_found`.
-3. Select the database.
+3. Select the newly created database.
 4. Open the **Import** tab.
-5. Choose the appropriate SQL file provided in the repository.
+5. Select the appropriate SQL file provided in the repository.
 6. Click **Import** or **Go**, depending on the interface.
-7. Confirm that the required tables have been created.
+7. Verify that the required database tables have been created.
 
-If the SQL file is stored in a different directory, select its actual location in the repository.
+The SQL file's name and location may vary. Use the actual database resource provided in the repository.
 
 ### Step 5: Configure the Database Connection
 
-Open `bracu_lost_and_found/db.php` and configure the database connection for your local environment.
+Open the `db.php` file in the `bracu_lost_and_found` directory.
 
-A typical default XAMPP configuration uses:
+For a default local XAMPP installation, the database connection settings may resemble the following:
 
 ```php
 $host = "localhost";
@@ -171,9 +210,9 @@ $password = "";
 $database = "bracu_lost_and_found";
 ```
 
-These are example settings for a default local installation. Use your actual MySQL credentials if they differ, and preserve the existing connection logic in `db.php`.
+These are example settings, not a replacement for the complete database connection code. Preserve the existing connection logic and adjust the credentials according to your local MySQL configuration.
 
-### Step 6: Open the Application
+### Step 6: Launch the Application
 
 Open your browser and visit:
 
@@ -181,71 +220,73 @@ Open your browser and visit:
 http://localhost/BRACU-LOST-AND-FOUND-PORTAL/bracu_lost_and_found/
 ```
 
-If your folder name or installation path is different, adjust the URL accordingly.
+If the application uses a specific entry-point file or a different directory structure, adjust the URL accordingly.
 
-### Step 7: Test the Features
+### Step 7: Test the Application
 
-Once the application opens, you can test the available functionality:
+After launching the application, test the available features:
 
-1. Register an account using an eligible email address.
-2. Log in with the registered credentials.
+1. Register an account.
+2. Log in using the registered credentials.
 3. Submit a lost or found item report.
-4. Browse the available item listings.
-5. Submit an ownership claim with the required information.
-6. Test proof document uploads where available.
+4. Browse the reported item listings.
+5. Open an item and submit an ownership claim.
+6. Test supporting evidence uploads, where available.
 7. Review claim status and notifications.
-8. Test messaging and feedback features.
-9. Check administrative functionality using an authorized administrator account.
+8. Test the messaging and feedback functionality.
+9. Verify administrative features using an authorized administrator account.
 
-Access to certain features depends on the user's role and the application's implementation.
+Access to particular features may depend on the assigned user role and application configuration.
 
 ## Database Overview
 
-The application uses a relational database named `bracu_lost_and_found`.
+The application uses a relational database configured through MySQL or MariaDB.
 
-The main tables include:
+The database resources should be inspected to identify the actual tables and relationships used by the application. The following table describes the expected responsibilities of the principal data categories; the names shown are illustrative and should be checked against the supplied SQL schema.
 
-| Table | Purpose |
+| Data Category | Purpose |
 |---|---|
-| `users` | Stores user account information and roles |
-| `reported_items` | Stores reported lost and found items |
-| `item_claims` | Stores item ownership claims and related information |
-| `messages` | Stores messages exchanged between users |
-| `notifications` | Stores notification information |
-| `feedback` | Stores submitted feedback |
+| User Accounts | Stores account information and supported roles |
+| Reported Items | Stores lost and found item reports |
+| Item Claims | Stores ownership claims and associated information |
+| Messages | Stores communication between users |
+| Notifications | Stores notification information |
+| Feedback | Stores user-submitted feedback |
 
-The database schema can be inspected through phpMyAdmin. Use the SQL resources included in the repository to initialize the database.
+Use the SQL resources included in the repository to initialize the database and phpMyAdmin to inspect its tables and relationships.
 
 ## Security Considerations
 
-Security is important because the application handles user accounts, contact information, claims, and uploaded documents.
+The application handles user accounts, contact information, ownership claims, and potentially uploaded documents. Appropriate security practices are therefore important.
 
 Recommended practices include:
 
-- Store passwords using secure password hashing.
+- Hash passwords using secure password-hashing functions.
 - Use prepared statements for database operations involving user input.
-- Validate user input and escape output appropriately.
+- Validate incoming data and escape output appropriately.
 - Enforce authentication and role-based authorization on the server.
-- Validate uploaded files and restrict file types and sizes.
-- Protect uploaded documents and sensitive user information from unauthorized access.
+- Validate uploaded files and restrict permitted file types and sizes.
+- Prevent unauthorized access to sensitive uploads and personal information.
 - Keep database credentials and other secrets out of public repositories.
-- Avoid displaying sensitive information in error messages.
+- Avoid exposing sensitive information in error messages.
+- Use HTTPS when deploying the application publicly.
 
-These are recommended security practices; the actual protection provided depends on the implementation in the source code.
+These recommendations describe good security practices; the actual security provided depends on the implementation in the source code and the deployment configuration.
 
 ## Future Improvements
 
-Potential enhancements include:
+Potential enhancements for future development include:
 
-- Advanced search and filtering for reported items.
+- Advanced search and filtering for lost and found items.
 - More detailed claim tracking and status updates.
 - Improved notification workflows.
 - Enhanced mobile responsiveness and accessibility.
-- Additional upload validation and document protection.
-- Expanded administrative reports and analytics.
+- Stronger upload validation and document protection.
+- Expanded administrative reporting and analytics.
+- Additional usability improvements.
 - Deployment to a suitable PHP and MySQL hosting environment.
 
-These are possible future enhancements rather than claims of existing functionality.
+These items represent possible future enhancements and are not necessarily implemented in the current version.
 
 ## Contributors
 
@@ -257,14 +298,18 @@ This project was developed collaboratively by the following group members:
 
 ## Repository
 
-[View the BRACU Lost and Found Portal on GitHub](https://github.com/sadiaislam2023/BRACU-LOST-AND-FOUND-PORTAL)
+**GitHub Repository:** [BRACU Lost and Found Portal](https://github.com/sadiaislam2023/BRACU-LOST-AND-FOUND-PORTAL)
+
+Explore the repository for the application's source code, database resources, screenshots, and project documentation.
 
 ## Disclaimer
 
-This is an independent personal group project developed for educational and demonstration purposes. It is **not an official BRAC University project, service, or platform**, and it is not affiliated with, endorsed by, or maintained by BRAC University.
+The BRACU Lost and Found Portal is an independent personal group project developed for educational and demonstration purposes.
 
-The name describes the project's intended use case and does not imply official university ownership or authorization.
+It is **not an official BRAC University project, service, or platform**. It is not affiliated with, endorsed by, sponsored by, or maintained by BRAC University.
+
+The BRACU name is used solely to describe the project's intended use case. Its inclusion does not imply official university ownership, authorization, or institutional involvement.
 
 ## License
 
-No open-source license is specified in this README. Unless a license is added to the repository, the project should not be assumed to be available for unrestricted reuse, modification, or redistribution.
+No open-source license is specified in this repository documentation. Unless a license is added to the repository, the project should not be assumed to be available for unrestricted reuse, modification, or redistribution.
