@@ -292,9 +292,9 @@ These items represent possible future enhancements and are not necessarily imple
 
 This project was developed collaboratively by the following group members:
 
-- **Sadia Islam** — [GitHub Profile](https://github.com/sadiaislam2023)
-- **Maliha Nigar** — [GitHub Profile](https://github.com/MALIHANIGAR)
-- **Adrija Paul** — [GitHub Profile](https://github.com/adri-ja02)
+- [**Sadia Islam**](https://github.com/sadiaislam2023)
+- [**Maliha Nigar**](https://github.com/MALIHANIGAR)
+- [**Adrija Paul**](https://github.com/adri-ja02)
 
 ## Repository
 
